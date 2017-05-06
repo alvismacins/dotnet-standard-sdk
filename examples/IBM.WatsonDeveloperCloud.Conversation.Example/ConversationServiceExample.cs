@@ -40,7 +40,7 @@ namespace IBM.WatsonDeveloperCloud.Conversation.Example
         {
             MessageRequest messageRequest = new MessageRequest()
             {
-                Input = new { Text = _inputString }
+                Input = new { text = _inputString }
             };
 
             Console.WriteLine(string.Format("Calling Message(\"{0}\")...", _inputString));
@@ -62,9 +62,9 @@ namespace IBM.WatsonDeveloperCloud.Conversation.Example
 
                 if (result.Output != null)
                 {
-                    if (result.Output.Text != null && result.Output.Text.Count > 0)
+                    if (result.Output.text != null && result.Output.text.Count > 0)
                     {
-                        foreach (string output in result.Output.Text)
+                        foreach (string output in result.Output.text)
                             Console.WriteLine(string.Format("Output: \"{0}\"", output));
                     }
                     else
